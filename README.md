@@ -102,7 +102,3 @@ Build Command: ```npm run build```
 Start Command: ```npm start```
 
 Environment Variables: In the Render Dashboard, add NODE_ENV=production, your MONGO_URI, and your Upstash Redis credentials.
-
-Author
-
-Bipanchandra06
