@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Navbar from '../components/navbar.jsx'
 import Notecard from '../components/notecard.jsx'
 import { useState } from 'react'
-import axios from 'axios'
+import api from '../lib/axios'
 import { LoaderCircleIcon } from 'lucide-react';
 
 
@@ -16,7 +16,7 @@ const Homepage = () => {
         const fetchnotes=async()=>{
             try{ 
                 //console.log("3. Sending request to Backend...");
-                const response=await axios.get("http://localhost:5001/api/notes/");
+                const response=await api.get("/notes/");
                 console.log("4. Response received:", response.data);
                 setnotes(response.data);
                 setloading(false);

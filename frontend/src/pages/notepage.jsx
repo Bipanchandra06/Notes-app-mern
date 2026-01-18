@@ -19,7 +19,7 @@ const Notepage = () => {
     console.log("fetchNote function is starting...");
     const fetchNote = async () => {
      try{
-        const response = await axios.get(`http://localhost:5001/api/notes/${id}`);
+        const response = await api.get(`/notes/${id}`);
         console.log("Full API Response:", response)
         setNote(response.data);
         console.log(note);
